@@ -64,7 +64,7 @@
 }
 
 .dropdown .dropbtn {
-  font-size: 20px;  
+  font-size: 15px;  
   border: none;
   outline: none;
   color: rgb(0, 0, 0);
@@ -110,7 +110,7 @@
 }
 
 .dropdown-aboutus .dropbtn {
-  font-size: 20px;
+  font-size: 15px;
   border: none;
   outline: none;
   color: rgb(0, 0, 0);
@@ -142,10 +142,12 @@ header {
   text-indent: 23px;  
 }
 
+
 nav {
   background-color: #765827;
   padding: 1px;
-  text-indent: 10px;   
+  text-indent: 10px;
+  position: relative;   
 }
 
 nav a {
@@ -180,145 +182,6 @@ main {
   color: #000000;
 }
 
-
-.English{ /* ito yung sa may div container*/
-  position: absolute;
-  top: 340px;
-  left: 90px;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #000000;
-  padding: 15px;
-  width: 25%;
-  border-radius: 44px;
-}
-
-.English h2 {
-  color: #000000;
-  text-emphasis: none;
-  text-align: center;
-}
-
-
-#searchResult {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-
-#searchResults a {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
-  color: rgb(188, 37, 37);
-  background-color: beige;
-}
-
-#searchResults li {
-  width: 300px; 
-  margin-left: 37%;
-  padding: 10px;
-  border: 1px solid #000000;
-  transition: transform 0.3s;
-  color: #ffffff;
-  margin-bottom: 10px; 
-  background-color: beige;
-  border-radius: 14px;
-}
-
-#searchResults li:hover {
-  transform: scale(1.05);
-}
-
-#biblioGrid {
-  width: 30%;
-  margin-left: 37%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  padding: 2px;
-  border: 2px solid #000000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Times New Roman', Times, serif;
-  color: rgb(5, 5, 5);
-  font-weight: 900;
-  background-color: beige;
-  border-radius: 14px;
-}
-
-#biblioGrid div {
-  padding: 2px;
-}
-
-/* Center the search input and button */
-#homePage {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-#backButton {
-  background-color: #765827; 
-  border: none;
-  margin-left: 37%;
-  color: white;
-  padding: 7px 7px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 5px;
-  cursor: pointer;
-  border-radius: 8px;
-  position: relative;
-}
-
-
-
-/* Adjust the distance from the top */
-.search-container {
-  position: absolute; 
-  padding: 2%;
-  top: 13px; 
-  right: 20px;   
-}
-
-.search-input {
-  padding: 10px; 
-  border-radius: 5px; 
-  border: 1px solid #ccc; 
-}
-
-.search-btn {
-  background-color: #C38154;
-  color: #fff; 
-  border: none; 
-  padding: 10px; 
-  border-radius: 5px; 
-  cursor: pointer; 
-}
-
-#definition-box {
-  margin-bottom: 20px; 
-  background-color: #f0f0f0;
-}
-
-#resultsPage {
-  display: none; 
-  background-color: none; 
-}
-
-#bibliographic-data {
-  margin-top: 20px; 
-  background-color: #f0f0f0;   
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
-}
 
 .Science {
   position: absolute;
@@ -407,127 +270,69 @@ border-radius: 44px;
 }
 
 
-#searchResult {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+@media  screen and (max-width: 768px) {
+  /* Adjustments for landscape tablets */
+  #searchResults li,
+  #biblioGrid {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #backButton {
+    margin-left: 10%;
+  }
+  
 }
 
+@media  screen and (max-width: 768px) {
+  /* Adjustments for landscape tablets */
+  .search-container {
+    width: 50%;
+    margin-left: 0;
+  }
+ }
+@media  screen and (max-width: 600px) {
+  /* Adjustments for small devices (e.g., portrait tablets and large phones) */
+  #searchResults li,
+  #biblioGrid {
+    width: 100%;
+    margin-left: 0;
+  }
 
-#searchResults a {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
-  color: rgb(188, 37, 37);
-  background-color: beige;
+  #backButton {
+    margin-left: 10%;
+  }
+  .dropdown .dropbtn {
+    padding: 5px ;
+  }
+  #nav {
+    margin-right: 44%;
+  }
 }
-
-#searchResults li {
-  width: 300px; 
-  margin-left: 37%;
-  padding: 10px;
-  border: 1px solid #000000;
-  transition: transform 0.3s;
-  color: #ffffff;
-  margin-bottom: 10px; 
-  background-color: beige;
-  border-radius: 14px;
+@media screen and (max-width: 600px) {
+  /* Adjustments for small devices (e.g., portrait tablets and large phones) */
+  .search-container {
+    width: 50%;
+    margin-left: 0;
+  }
+  .search-btn {
+    padding: 5px;
+    margin-top: 5px;
+  }
+  .search-input {
+    padding: 4px;
+    width: 100px;
+    margin-left: 40px;
+  }
+  .dropdown .dropbtn {
+    padding: 5px;
+    float: right;
+  }
+  .nav {
+    margin-right: 0; /* Reset margin-right */
+    float: right; /* Move navigation bar to the right */
+  }
 }
-
-#searchResults li:hover {
-  transform: scale(1.05);
-}
-
-#biblioGrid {
-  width: 30%;
-  margin-left: 37%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  padding: 2px;
-  border: 2px solid #000000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Times New Roman', Times, serif;
-  color: rgb(5, 5, 5);
-  font-weight: 900;
-  background-color: beige;
-  border-radius: 14px;
-}
-
-#biblioGrid div {
-  padding: 2px;
-}
-
-/* Center the search input and button */
-#homePage {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-#backButton {
-  background-color: #765827; 
-  border: none;
-  margin-left: 37%;
-  color: white;
-  padding: 7px 7px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 5px;
-  cursor: pointer;
-  border-radius: 8px;
-  position: relative;
-}
-
-
-
-/* Adjust the distance from the top */
-.search-container {
-  position: absolute; 
-  padding: 2%;
-  top: 13px; 
-  right: 20px;   
-}
-
-.search-input {
-  padding: 10px; 
-  border-radius: 5px; 
-  border: 1px solid #ccc; 
-}
-
-.search-btn {
-  background-color: #C38154;
-  color: #fff; 
-  border: none; 
-  padding: 10px; 
-  border-radius: 5px; 
-  cursor: pointer; 
-}
-
-#definition-box {
-  margin-bottom: 20px; 
-  background-color: #f0f0f0;
-}
-
-#resultsPage {
-  display: none; 
-  background-color: none; 
-}
-
-#bibliographic-data {
-  margin-top: 20px; 
-  background-color: #f0f0f0;   
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
-}
-
 
 @media only screen and (max-width: 1200px) {
   /* Adjustments for large laptops and desktops */
@@ -601,21 +406,21 @@ border-radius: 44px;
     </header>
   
     <nav>
-      <a href="https://elibdado.github.io/main-DADO/">Home</a>
+      <a href="E:\laht ng html\dado homepage\dado homepage.html">Home</a>
       <div class="dropdown-aboutus">
         <button class="dropbtn">About Us <i class="fa fa-caret-down"></i></button>
         <div class="dropdown-aboutus-content">
-          <a href="https://elibdado.github.io/Mission-DADO/">School Mission</a>
-          <a href="https://elibdado.github.io/vision-DADO/">School Vision</a>
+          <a href="E:\dado vision\mission.html">School Mission</a>
+          <a href="E:\dado vision\vision.html">School Vision</a>
         </div>
       </div>
       <a href="#">Contact</a>
       <div class="dropdown">
         <button class="dropbtn">Select book <i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content">
-          <a href=" https://elibdado.github.io/english-DADO/">English</a>
-          <a href="https://elibdado.github.io/MATH-DADO/">Math</a>
-          <a href="https://elibdado.github.io/science/">Science</a>
+          <a href="E:\laht ng html\dado homepage\english.html">English</a>
+          <a href="E:\laht ng html\dado homepage\math.html">Math</a>
+          <a href="https://elibdado.github.io/SCIENCE-DADO/">Science</a>
         </div>
       </div>
     </nav>
